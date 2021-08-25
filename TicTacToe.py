@@ -83,18 +83,14 @@ if __name__ == '__main__':
             print("Invalid Move")
             continue
         if board.check_win(active_player):
-            print("You won! GG DUDE")
+            print("You won!")
             board.print_board()
-            if board.check_win(active_player):
-                print("You won! GG DUDE")
-                board.print_board()
-                option = input("Do you want to play again Yes or No: ")
-                if option == "Yes":
-                    board.reset_state()
-                if option == "No":
-                    break
+            input1 = input("Do you want to play again Yes or No: ")
+            if input1 == "Yes":
+                board.reset_state()
+            if input1 == "No":
+                break
         if active_player == player_a:
             active_player = player_b
-
         else:
             active_player = player_a
