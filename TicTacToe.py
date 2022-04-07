@@ -72,7 +72,7 @@ if __name__ == '__main__':
     while not board.is_full():
         board.print_board()
         try:
-            cell = int(input("Where do you want to place your Sign [1-9]\n"))
+            cell = int(input("Where do you want to place your Sign [1-9]: "))
         except ValueError:
             continue
         cell = cell - 1
